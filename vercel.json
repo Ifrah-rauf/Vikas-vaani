@@ -2,11 +2,7 @@
   "builds": [
     {
       "src": "ibmproject/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -18,11 +14,6 @@
       "src": "/(.*)",
       "dest": "ibmproject/wsgi.py"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/static/(.*)",
-      "destination": "/staticfiles_build/static/$1"
-    }
   ]
 }
+
