@@ -141,4 +141,3 @@ EMAIL_HOST_USER = 'ifrahraufddps@gmail.com'  # Replace with your Gmail address
 EMAIL_HOST_PASSWORD = 'fvni hziw wfkx wtpi'  # Replace with your Gmail password or an app-specific password
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
