@@ -24,9 +24,11 @@ SECRET_KEY = 'django-insecure-&7)(h_a27!5ykz4wf@(6b(atl%qom6q#ypd&g7q%5d9(w=l&6m
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = 'ibmproject/staticfiles_build/static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # This is your original static folder
+]
+STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
+STATIC_URL = '/static/'
 # if os.getenv('VERCEL'):
 #     DEBUG = False
 DEBUG = False
@@ -54,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ibmproject.urls'
@@ -141,3 +144,4 @@ EMAIL_HOST_USER = 'ifrahraufddps@gmail.com'  # Replace with your Gmail address
 EMAIL_HOST_PASSWORD = 'fvni hziw wfkx wtpi'  # Replace with your Gmail password or an app-specific password
 
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
