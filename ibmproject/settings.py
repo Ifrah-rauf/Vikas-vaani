@@ -30,7 +30,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # if os.getenv('VERCEL'):
 #     DEBUG = False
 DEBUG = False
-ALLOWED_HOSTS = ['.vercel.apps']
+ALLOWED_HOSTS = ['vikas-vaani-rj8d.vercel.app']
 # '.vercel.app'
 #     
 
