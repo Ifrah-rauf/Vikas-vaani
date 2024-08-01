@@ -18,5 +18,10 @@
       "src": "/(.*)",
       "dest": "ibmproject/wsgi.py"
     }
+  ],
+  "rewrites":[
+    {
+      "sources": "/(.*)","destinations":"/"
+    }
   ]
 }
