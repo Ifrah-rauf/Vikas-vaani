@@ -19,9 +19,10 @@
       "dest": "ibmproject/wsgi.py"
     }
   ],
-  "rewrites":[
+  "rewrites": [
     {
-      "source": "/(.*)","destination":"/"
+      "source": "/static/(.*)",
+      "destination": "/staticfiles_build/static/$1"
     }
   ]
 }
