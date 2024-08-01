@@ -29,8 +29,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # if os.getenv('VERCEL'):
 #     DEBUG = False
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['.vercel.apps']
 # '.vercel.app'
 #     
 
